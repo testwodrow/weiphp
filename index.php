@@ -61,7 +61,7 @@ define ( 'SITE_PATH', dirname ( __FILE__ ) );
  * 应用目录设置
  * 安全期间，建议安装调试完成后移动到非WEB目录
  */
-define ( 'APP_PATH', './Application/' );
+define ( 'APP_PATH', SITE_PATH.'/Application/' );
 
 if (! is_file ( SITE_PATH . '/Data/install.lock' )) {
 	header ( 'Location: ./install.php' );
@@ -72,7 +72,7 @@ if (! is_file ( SITE_PATH . '/Data/install.lock' )) {
  * 缓存目录设置
  * 此目录必须可写，建议移动到非WEB目录
  */
-define ( 'RUNTIME_PATH', './Runtime/' );
+define ( 'RUNTIME_PATH', SITE_PATH.'/Runtime/' );
 
 /**
  * 引入核心入口
