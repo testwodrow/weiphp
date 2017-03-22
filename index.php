@@ -44,7 +44,7 @@ if (! empty ( $_GET ['echostr'] ) && ! empty ( $_GET ["signature"] ) && ! empty 
  * 项目正式部署后请设置为false
  */
 define ( 'APP_DEBUG', true );
-define ( 'SHOW_ERROR', false );
+define ( 'SHOW_ERROR', true );
 
 define ( 'IN_WEIXIN', false );
 define ( 'DEFAULT_TOKEN', '-1' ); 
@@ -74,6 +74,9 @@ if (! is_file ( SITE_PATH . '/Data/install.lock' )) {
  */
 define ( 'RUNTIME_PATH', SITE_PATH.'/Runtime/' );
 
+/**
+ * classes文件自动载入类
+ */
 require SITE_PATH.'/classes/loader.php';
 
 /**
